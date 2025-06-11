@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "1668bdd1-8adb-4f42-86f7-139b90a3590e",
+		"name": "05-POSTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7506629",
+		"_collection_link": "https://orange-space-308910.postman.co/workspace/Entrevistas~c64e8b74-4776-42bf-8048-885b423408fa/collection/7506629-1668bdd1-8adb-4f42-86f7-139b90a3590e?action=share&source=collection_link&creator=7506629"
+	},
+	"item": [
+		{
+			"name": "getCommentPosts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 1,\r\n  \"includeComments\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts/api/v1/user/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"api",
+						"v1",
+						"user",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCommentPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/posts/api/v1/user/1/summary?includeComments=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"api",
+						"v1",
+						"user",
+						"1",
+						"summary"
+					],
+					"query": [
+						{
+							"key": "includeComments",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
